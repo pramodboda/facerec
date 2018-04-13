@@ -1,5 +1,5 @@
 
-const videoElement = document.querySelector('video');
+const videoElement = document.querySelector('video#video1');
 const audioSelect = document.querySelector('select#audioSource');
 const videoSelect = document.querySelector('select#videoSource');
 
@@ -61,7 +61,7 @@ function handleError(error) {
 
 
 
-/*function hasGetUserMedia() {
+function hasGetUserMedia() {
   return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
 }
 const constraints = {
@@ -76,7 +76,7 @@ var vgaConstraints = {
 
 var isRunning = false;
 
-const video = document.querySelector('video');
+const video = document.querySelector('video#video2');
 function handleSuccess(stream) {
   video.srcObject = stream;
   video.play();
@@ -108,7 +108,7 @@ function opencamera(){
 }  
   
   
-}*/
+}
 
 
 
