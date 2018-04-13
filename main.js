@@ -29,7 +29,7 @@ function opencamera(){
 
   if (hasGetUserMedia()) {
 
-    navigator.mediaDevices.getUserMedia(hdConstraints).
+    navigator.mediaDevices.getUserMedia(constraints).
   then(handleSuccess).catch(handleError);
     
     
