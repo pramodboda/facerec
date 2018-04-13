@@ -1,8 +1,7 @@
 var cacheName = 'featurePwaCache-1';
 var filesToCache = [
    '/features/',
-  '/features/index.html',
-  '/features/main.js',
+  '/features/index.html'
 ];
 // I am new sevice worker 2
 self.addEventListener('install', function(e) {
