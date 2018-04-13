@@ -16,11 +16,9 @@ function handleError(error) {
 }
 
 
-if (hasGetUserMedia()) {
+function opencamera(){
 
-  
-  
-
+  if (hasGetUserMedia()) {
 
 navigator.mediaDevices.getUserMedia(constraints).
   then(handleSuccess).catch(handleError);
@@ -30,4 +28,7 @@ navigator.mediaDevices.getUserMedia(constraints).
   
 } else {
   alert('getUserMedia() is not supported by your browser');
+}  
+  
+  
 }
