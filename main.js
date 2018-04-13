@@ -27,7 +27,7 @@ function opencamera(){
     
     
     if(isRunning){
-      video.pause(); 
+      video.stop(); 
       isRunning=false;
     }
     else{
