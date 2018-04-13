@@ -71,6 +71,7 @@ const canvas = document.createElement('canvas');
     canvas.getContext('2d').drawImage(video, 0, 0);
     // Other browsers will fall back to image/png
     img.src = canvas.toDataURL('image/webp');
+    
   };
 
 
@@ -83,7 +84,7 @@ function downloadCanvas(link, canvasId, filename) {
 
 
 document.getElementById('clicktodownload').addEventListener('click', function() {
-    downloadCanvas(this, 'screenshot-img', 'test.png');
+    downloadCanvas(this, 'canvas', 'test.png');
 }, false);
 
 
