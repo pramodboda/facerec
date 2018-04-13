@@ -59,7 +59,7 @@ function handleError(error) {
 
  const button = document.querySelector('#screenshot-button');
   const img = document.querySelector('#screenshot-img');
-  const video = document.querySelector('#video1');
+ 
 
 const canvas = document.createElement('canvas');
 
