@@ -9,6 +9,7 @@ const constraints = {
 const video = document.querySelector('video');
 function handleSuccess(stream) {
   video.srcObject = stream;
+  video.play();
 }
 
 function handleError(error) {
