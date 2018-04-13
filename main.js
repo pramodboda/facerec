@@ -83,7 +83,7 @@ function downloadCanvas(link, canvasId, filename) {
 
 
 document.getElementById('clicktodownload').addEventListener('click', function() {
-    downloadCanvas(this, 'canvas', 'test.png');
+    downloadCanvas(this, 'screenshot-img', 'test.png');
 }, false);
 
 
