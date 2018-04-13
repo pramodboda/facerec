@@ -29,13 +29,18 @@
   First PWA App
   <input type="file" accept="image/*;capture=camera">
   <input type="button" value="OpenCamera" onclick="opencamera()">
-	
+ 
 	<device type="media" onchange="update(this.data)"></device>
 	<select id="audioSource"></select><select id="videoSource"></select>
 	
-	<video id="video1" autoplay></video>
+	<video id="video1" autoplay ></video>
 	<video id="video2"></video>
 	
+	<button id="screenshot-button">Screenshot</button>
+	
+	<canvas style="display:none;"></canvas>
+
+	<img src="" alt="capturedPic" id="screenshot-img">
 	
 	
 <script>
