@@ -38,10 +38,10 @@
 	
 	<button id="screenshot-button">Screenshot</button>
 	
-	<canvas style="display:none;"></canvas>
-       <a download="myimg.jpg" href="/" title="ImageName">
+	<canvas style="display:none;" id="canvas"></canvas>
+       <a download="myimg.jpg" href="/" title="ImageName" id="clicktodownload">Download</a>
 	    <img src="" alt="capturedPic" id="screenshot-img">
-	</a>
+	
 	
 <script>
   function update(stream) {
