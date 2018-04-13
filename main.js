@@ -33,14 +33,9 @@ function opencamera(){
   then(handleSuccess).catch(handleError);
     
     
-    if(isRunning){
-      video.stop(); 
-      isRunning=false;
-    }
-    else{
+   
       video.play();
-      isRunning = true;
-    }
+    
 
   
   
