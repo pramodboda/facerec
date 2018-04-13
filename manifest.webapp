@@ -1,0 +1,38 @@
+{
+  "name": "Features",
+  "short_name": "Features",
+  "gcm_sender_id": "",
+  "icons": [
+  {
+    "src": "logo.png",
+    "type": "image/png",
+    "sizes": "48x48"
+  },
+  {
+    "src": "logo.png",
+    "type": "image/png",
+    "sizes": "96x96"
+  },
+  {
+    "src": "logo.png",
+    "type": "image/png",
+    "sizes": "144x144"
+  },
+  {
+    "src": "logo.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#e0e0e0",
+  "start_url": "/features/index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "prefer_related_applications": true,
+   "related_applications": [{
+    "platform": "play",
+    "id": "livio.pack.lang.en_US",
+    "url": "https://play.google.com/store/apps/details?id=livio.pack.lang.en_US"
+  }]
+}
