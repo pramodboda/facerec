@@ -5,6 +5,13 @@ function hasGetUserMedia() {
 const constraints = {
   video: true
 };
+var hdConstraints = {
+  video: {width: {min: 1280}, height: {min: 720}}
+};
+var vgaConstraints = {
+  video: {width: {exact: 640}, height: {exact: 480}}
+};
+
 var isRunning = false;
 
 const video = document.querySelector('video');
@@ -22,7 +29,7 @@ function opencamera(){
 
   if (hasGetUserMedia()) {
 
-    navigator.mediaDevices.getUserMedia(constraints).
+    navigator.mediaDevices.getUserMedia(hdConstraints).
   then(handleSuccess).catch(handleError);
     
     
