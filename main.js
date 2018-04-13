@@ -5,6 +5,7 @@ function hasGetUserMedia() {
 const constraints = {
   video: true
 };
+var isRunning = false;
 
 const video = document.querySelector('video');
 function handleSuccess(stream) {
@@ -21,8 +22,19 @@ function opencamera(){
 
   if (hasGetUserMedia()) {
 
-navigator.mediaDevices.getUserMedia(constraints).
+    navigator.mediaDevices.getUserMedia(constraints).
   then(handleSuccess).catch(handleError);
+    
+    
+    if(isRunning){
+      video.pause(); 
+      isRunning=false;
+    }
+    else{
+      video.play();
+      isRunning = true;
+    }
+
   
   
   
