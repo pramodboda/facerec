@@ -2,6 +2,7 @@
 var context;
 window.addEventListener('load', init, false);
 function init() {
+  debugger;
   try {
     alert("This browser support Web Audio API");
     window.AudioContext = window.AudioContext||window.webkitAudioContext;
