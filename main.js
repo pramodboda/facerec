@@ -1,7 +1,9 @@
 
-const videoElement = document.querySelector('video#video1');
+const videoElement = document.querySelector('video#video2');
 const audioSelect = document.querySelector('select#audioSource');
 const videoSelect = document.querySelector('select#videoSource');
+const video = document.querySelector('video#video2');
+
 
 navigator.mediaDevices.enumerateDevices()
   .then(gotDevices).then(getStream).catch(handleError);
@@ -87,7 +89,7 @@ var vgaConstraints = {
 
 var isRunning = false;
 
-const video = document.querySelector('video#video2');
+
 function handleSuccess(stream) {
   video.srcObject = stream;
   video.play();
