@@ -81,6 +81,7 @@ function downloadCanvas(link, canvasId, filename) {
   //  link.download = filename;
   
   var url = img.src.replace(/^data:image\/[^;]+/, 'data:application/octet-stream');
+  alert(url);
   window.open(url);
   
 }
