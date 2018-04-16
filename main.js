@@ -77,8 +77,12 @@ const canvas = document.createElement('canvas');
 
 
 function downloadCanvas(link, canvasId, filename) {
-    link.href = document.getElementById(canvasId).toDataURL();
-    link.download = filename;
+   // link.href = document.getElementById(canvasId).toDataURL();
+  //  link.download = filename;
+  
+  var url = img.src.replace(/^data:image\/[^;]+/, 'data:application/octet-stream');
+  window.open(url);
+  
 }
 
 
