@@ -1,0 +1,28 @@
+<html>
+  <body>
+  
+  Test
+  
+  
+  </body>
+  <script>
+  
+  var url="https://suryaphani1729.github.io/features/test.json";
+  
+  
+  function logFetch(url) {
+  return fetch(url)
+    .then(response => response.text())
+    .then(text => {
+      console.log(text);
+    }).catch(err => {
+      console.error('fetch failed', err);
+    });
+}
+  
+  
+  </script>
+
+
+
+</html>
