@@ -25,7 +25,7 @@
   return fetch(url)
     .then(function(response){
       console.log(response);
-    }).catch({
+    }).catch(function(err){
       console.log('fetch failed', err);
     });
 }
