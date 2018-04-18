@@ -22,8 +22,7 @@
     
     function logFetch(url) {
   return fetch(url)
-    .then(response)
-    .then({
+    .then(function(response){
       console.log(response);
     }).catch({
       console.log('fetch failed', err);
