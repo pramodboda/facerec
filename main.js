@@ -74,7 +74,14 @@ const ctx;
     canvas.getContext('2d').drawImage(video, 0, 0);
     // Other browsers will fall back to image/png
     img.src = canvas.toDataURL('image/webp');
-    html5glasses();
+   
+	  
+	   $('#canvas').faceDetection({
+     complete: function (faces) { 
+         alert(faces);     
+     }  
+    });
+	  
   };
 
 
@@ -83,15 +90,15 @@ function html5glasses() {
 	
 
 	// use the face detection library to find the face
-	var comp = ccv.detect_objects({ "canvas" : (ccv.pre(canvas)),
+	//var comp = ccv.detect_objects({ "canvas" : (ccv.pre(canvas)),
 									"cascade" : cascade,
 									"interval" : 5,
 									"min_neighbors" : 1 });
 
 	// Draw glasses on everyone!
-	for (var i = 0; i < comp.length; i++) {
-		ctx.drawImage(glasses, comp[i].x, comp[i].y,comp[i].width, comp[i].height);
-	}
+	//for (var i = 0; i < comp.length; i++) {
+	//	ctx.drawImage(glasses, comp[i].x, comp[i].y,comp[i].width, comp[i].height);
+	//}
 }
 
 
