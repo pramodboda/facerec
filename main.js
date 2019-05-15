@@ -30,6 +30,8 @@ function gotDevices(deviceInfos) {
   }
 }
 
+
+
 function getStream() {
   if (window.stream) {
     window.stream.getTracks().forEach(function(track) {
@@ -64,15 +66,39 @@ function handleError(error) {
  
 
 const canvas = document.createElement('canvas');
-
+const ctx;
   button.onclick = video.onclick = function() {
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
+    ctx = canvas.getContext('2d');
     canvas.getContext('2d').drawImage(video, 0, 0);
     // Other browsers will fall back to image/png
     img.src = canvas.toDataURL('image/webp');
-    
+    html5glasses();
   };
+
+
+function html5glasses() {
+	// Start the clock 
+	var elapsed_time = (new Date()).getTime();
+
+	// Draw the video to canvas
+	ctx.drawImage(video, 0, 0, video.width, video.height, 0, 0, canvas.width, canvas.height);
+
+	// use the face detection library to find the face
+	var comp = ccv.detect_objects({ "canvas" : (ccv.pre(canvas)),
+									"cascade" : cascade,
+									"interval" : 5,
+									"min_neighbors" : 1 });
+
+	// Stop the clock
+	time_dump.innerHTML = "Process time : " + ((new Date()).getTime() - elapsed_time).toString() + "ms";
+
+	// Draw glasses on everyone!
+	for (var i = 0; i < comp.length; i++) {
+		ctx.drawImage(glasses, comp[i].x, comp[i].y,comp[i].width, comp[i].height);
+	}
+}
 
 
 
