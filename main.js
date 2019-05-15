@@ -94,9 +94,9 @@ function html5glasses() {
 
 	// use the face detection library to find the face
 	//var comp = ccv.detect_objects({ "canvas" : (ccv.pre(canvas)),
-									"cascade" : cascade,
-									"interval" : 5,
-									"min_neighbors" : 1 });
+// 									"cascade" : cascade,
+// 									"interval" : 5,
+// 									"min_neighbors" : 1 });
 
 	// Draw glasses on everyone!
 	//for (var i = 0; i < comp.length; i++) {
