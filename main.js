@@ -67,6 +67,16 @@ function handleError(error) {
 
 const canvas = document.createElement('canvas');
 const ctx;
+
+ function drawLoop() {
+    requestAnimationFrame(drawLoop);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctracker.draw(canvasInput);
+  }
+  
+
+const ctracker;
+
   button.onclick = video.onclick = function() {
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
@@ -78,12 +88,12 @@ const ctx;
 	  
 	  var videoInput = document.getElementById('video1');
   
-  var ctracker = new clm.tracker();
+  ctracker = new clm.tracker();
   ctracker.init();
   ctracker.start(videoInput);
   var positions = ctracker.getCurrentPosition();
 	  
-	  
+	  drawLoop();
 	  
   };
 
