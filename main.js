@@ -79,7 +79,10 @@ const ctx;
 	   $('#canvas').faceDetection({
      complete: function (faces) { 
          alert(faces);     
-     }  
+     },
+		   error: function(e){
+			alert(e.message);   
+		   }
     });
 	  
   };
