@@ -90,7 +90,7 @@ const ctracker;
   
   ctracker = new clm.tracker();
   ctracker.init();
-  ctracker.start(videoInput);
+  ctracker.start(video);
   var positions = ctracker.getCurrentPosition();
 	  alert(positions);
 	  drawLoop();
