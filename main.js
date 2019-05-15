@@ -92,7 +92,7 @@ const ctracker;
   ctracker.init();
   ctracker.start(videoInput);
   var positions = ctracker.getCurrentPosition();
-	  
+	  alert(positions);
 	  drawLoop();
 	  var drawCanvas = document.getElementsById('canvas');
          ctracker.draw(drawCanvas);
