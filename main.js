@@ -76,14 +76,14 @@ const ctx;
     img.src = canvas.toDataURL('image/webp');
    
 	  
-	   $('#canvas').faceDetection({
-     complete: function (faces) { 
-         alert(faces);     
-     },
-		   error: function(e){
-			alert(e.message);   
-		   }
-    });
+	  var videoInput = document.getElementById('video1');
+  
+  var ctracker = new clm.tracker();
+  ctracker.init();
+  ctracker.start(videoInput);
+  var positions = ctracker.getCurrentPosition();
+	  
+	  
 	  
   };
 
