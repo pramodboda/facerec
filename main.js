@@ -94,6 +94,8 @@ const ctracker;
   var positions = ctracker.getCurrentPosition();
 	  
 	  drawLoop();
+	  var drawCanvas = document.getElementsById('canvas');
+         ctracker.draw(drawCanvas);
 	  
   };
 
