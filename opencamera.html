@@ -45,6 +45,12 @@ function getStream() {
     audio: {
       deviceId: {exact: audioSelect.value}
     },
+   
+   const vgaConstraints = {
+  video: {width: {exact: 640}, height: {exact: 480}}
+};
+
+ 
     video: {
       deviceId: {exact: videoSelect.value}
     }
