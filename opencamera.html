@@ -4,8 +4,7 @@
 <device type="media" onchange="update(this.data)"></device>
 <video autoplay></video>
 </body>
-<script>
- const videoElement = document.querySelector('video');
+<script>const videoElement = document.querySelector('video');
 const audioSelect = document.querySelector('select#audioSource');
 const videoSelect = document.querySelector('select#videoSource');
 
@@ -45,7 +44,6 @@ function getStream() {
     audio: {
       deviceId: {exact: audioSelect.value}
     },
- 
     video: {
       deviceId: {exact: videoSelect.value}
     }
